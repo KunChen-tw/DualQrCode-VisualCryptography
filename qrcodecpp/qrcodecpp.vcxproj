@@ -169,11 +169,11 @@
     <ClInclude Include="VisualSecretSharing.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="s.png" />
-    <Image Include="vsimg.png" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Image Include="input\v4\s.png" />
+    <Image Include="input\v5\vsimg.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
