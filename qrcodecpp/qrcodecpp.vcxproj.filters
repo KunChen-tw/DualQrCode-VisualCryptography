@@ -31,6 +31,15 @@
     <Filter Include="Resource Files\v7_number">
       <UniqueIdentifier>{40c0a8d4-573c-49b3-bc49-f0d220428d66}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\v8_number">
+      <UniqueIdentifier>{32065671-3ec3-4257-8796-2d7ac6929303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\v9_number">
+      <UniqueIdentifier>{0d006391-8674-490e-8989-fa2ff28962d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\v10_number">
+      <UniqueIdentifier>{d8b4b952-d0f3-402f-94ef-695cc79c9ea5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BitBuffer.cpp">
@@ -186,6 +195,87 @@
     </Image>
     <Image Include="input\v7_number\two.png">
       <Filter>Resource Files\v7_number</Filter>
+    </Image>
+    <Image Include="input\v8_number\eight.png">
+      <Filter>Resource Files\v8_number</Filter>
+    </Image>
+    <Image Include="input\v8_number\five.png">
+      <Filter>Resource Files\v8_number</Filter>
+    </Image>
+    <Image Include="input\v8_number\four.png">
+      <Filter>Resource Files\v8_number</Filter>
+    </Image>
+    <Image Include="input\v8_number\nine.png">
+      <Filter>Resource Files\v8_number</Filter>
+    </Image>
+    <Image Include="input\v8_number\one.png">
+      <Filter>Resource Files\v8_number</Filter>
+    </Image>
+    <Image Include="input\v8_number\seven.png">
+      <Filter>Resource Files\v8_number</Filter>
+    </Image>
+    <Image Include="input\v8_number\six.png">
+      <Filter>Resource Files\v8_number</Filter>
+    </Image>
+    <Image Include="input\v8_number\three.png">
+      <Filter>Resource Files\v8_number</Filter>
+    </Image>
+    <Image Include="input\v8_number\two.png">
+      <Filter>Resource Files\v8_number</Filter>
+    </Image>
+    <Image Include="input\v9_number\eight.png">
+      <Filter>Resource Files\v9_number</Filter>
+    </Image>
+    <Image Include="input\v9_number\five.png">
+      <Filter>Resource Files\v9_number</Filter>
+    </Image>
+    <Image Include="input\v9_number\four.png">
+      <Filter>Resource Files\v9_number</Filter>
+    </Image>
+    <Image Include="input\v9_number\nine.png">
+      <Filter>Resource Files\v9_number</Filter>
+    </Image>
+    <Image Include="input\v9_number\one.png">
+      <Filter>Resource Files\v9_number</Filter>
+    </Image>
+    <Image Include="input\v9_number\seven.png">
+      <Filter>Resource Files\v9_number</Filter>
+    </Image>
+    <Image Include="input\v9_number\six.png">
+      <Filter>Resource Files\v9_number</Filter>
+    </Image>
+    <Image Include="input\v9_number\three.png">
+      <Filter>Resource Files\v9_number</Filter>
+    </Image>
+    <Image Include="input\v9_number\two.png">
+      <Filter>Resource Files\v9_number</Filter>
+    </Image>
+    <Image Include="input\v10_number\eight.png">
+      <Filter>Resource Files\v10_number</Filter>
+    </Image>
+    <Image Include="input\v10_number\five.png">
+      <Filter>Resource Files\v10_number</Filter>
+    </Image>
+    <Image Include="input\v10_number\four.png">
+      <Filter>Resource Files\v10_number</Filter>
+    </Image>
+    <Image Include="input\v10_number\nine.png">
+      <Filter>Resource Files\v10_number</Filter>
+    </Image>
+    <Image Include="input\v10_number\one.png">
+      <Filter>Resource Files\v10_number</Filter>
+    </Image>
+    <Image Include="input\v10_number\seven.png">
+      <Filter>Resource Files\v10_number</Filter>
+    </Image>
+    <Image Include="input\v10_number\six.png">
+      <Filter>Resource Files\v10_number</Filter>
+    </Image>
+    <Image Include="input\v10_number\three.png">
+      <Filter>Resource Files\v10_number</Filter>
+    </Image>
+    <Image Include="input\v10_number\two.png">
+      <Filter>Resource Files\v10_number</Filter>
     </Image>
   </ItemGroup>
 </Project>

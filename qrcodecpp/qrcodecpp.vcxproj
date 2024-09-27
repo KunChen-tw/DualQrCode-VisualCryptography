@@ -172,6 +172,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="input\v10_number\eight.png" />
+    <Image Include="input\v10_number\five.png" />
+    <Image Include="input\v10_number\four.png" />
+    <Image Include="input\v10_number\nine.png" />
+    <Image Include="input\v10_number\one.png" />
+    <Image Include="input\v10_number\seven.png" />
+    <Image Include="input\v10_number\six.png" />
+    <Image Include="input\v10_number\three.png" />
+    <Image Include="input\v10_number\two.png" />
     <Image Include="input\v4\s.png" />
     <Image Include="input\v4_number\eight.png" />
     <Image Include="input\v4_number\five.png" />
@@ -210,6 +219,24 @@
     <Image Include="input\v7_number\six.png" />
     <Image Include="input\v7_number\three.png" />
     <Image Include="input\v7_number\two.png" />
+    <Image Include="input\v8_number\eight.png" />
+    <Image Include="input\v8_number\five.png" />
+    <Image Include="input\v8_number\four.png" />
+    <Image Include="input\v8_number\nine.png" />
+    <Image Include="input\v8_number\one.png" />
+    <Image Include="input\v8_number\seven.png" />
+    <Image Include="input\v8_number\six.png" />
+    <Image Include="input\v8_number\three.png" />
+    <Image Include="input\v8_number\two.png" />
+    <Image Include="input\v9_number\eight.png" />
+    <Image Include="input\v9_number\five.png" />
+    <Image Include="input\v9_number\four.png" />
+    <Image Include="input\v9_number\nine.png" />
+    <Image Include="input\v9_number\one.png" />
+    <Image Include="input\v9_number\seven.png" />
+    <Image Include="input\v9_number\six.png" />
+    <Image Include="input\v9_number\three.png" />
+    <Image Include="input\v9_number\two.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
