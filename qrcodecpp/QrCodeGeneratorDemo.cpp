@@ -123,7 +123,8 @@ int main()
 	string* filenames = new string{ "a.png", "b.png" };
 	//Mat imgSecret = imread("vsimg.png");
 	
-	Mat imgSecret = imread("s.png");
+
+	Mat imgSecret = imread("input\\v4\\s.png");
 	imshow("Secret Image", imgSecret);
 
 	Mat imgRG = EncodeRandomGridQrCode(imgSecret, qrFar, qZsize, mSize);
