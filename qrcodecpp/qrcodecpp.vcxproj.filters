@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\v4">
+      <UniqueIdentifier>{a51a3b3b-73a1-45f9-bdb8-a022341bcf48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\v5">
+      <UniqueIdentifier>{57632dd3-dad5-4612-9992-0faeea3ba83a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BitBuffer.cpp">
@@ -52,14 +58,14 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="s.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="vsimg.png">
-      <Filter>Resource Files</Filter>
-    </Image>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Image Include="input\v4\s.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\v5\vsimg.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
   </ItemGroup>
 </Project>
