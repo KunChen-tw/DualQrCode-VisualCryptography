@@ -19,9 +19,6 @@
     <Filter Include="Resource Files\v5">
       <UniqueIdentifier>{57632dd3-dad5-4612-9992-0faeea3ba83a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\v4_number">
-      <UniqueIdentifier>{3ca2b561-d165-4376-acd6-a9afd749fb35}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files\v5_number">
       <UniqueIdentifier>{3b5d4373-b9ce-4602-8785-8fdf4f1da0fc}</UniqueIdentifier>
     </Filter>
@@ -82,39 +79,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="input\v4\s.png">
-      <Filter>Resource Files\v4</Filter>
-    </Image>
-    <Image Include="input\v5\vsimg.png">
-      <Filter>Resource Files\v5</Filter>
-    </Image>
-    <Image Include="input\v4_number\eight.png">
-      <Filter>Resource Files\v4_number</Filter>
-    </Image>
-    <Image Include="input\v4_number\five.png">
-      <Filter>Resource Files\v4_number</Filter>
-    </Image>
-    <Image Include="input\v4_number\four.png">
-      <Filter>Resource Files\v4_number</Filter>
-    </Image>
-    <Image Include="input\v4_number\nine.png">
-      <Filter>Resource Files\v4_number</Filter>
-    </Image>
-    <Image Include="input\v4_number\one.png">
-      <Filter>Resource Files\v4_number</Filter>
-    </Image>
-    <Image Include="input\v4_number\seven.png">
-      <Filter>Resource Files\v4_number</Filter>
-    </Image>
-    <Image Include="input\v4_number\six.png">
-      <Filter>Resource Files\v4_number</Filter>
-    </Image>
-    <Image Include="input\v4_number\three.png">
-      <Filter>Resource Files\v4_number</Filter>
-    </Image>
-    <Image Include="input\v4_number\two.png">
-      <Filter>Resource Files\v4_number</Filter>
-    </Image>
     <Image Include="input\v5_number\eight.png">
       <Filter>Resource Files\v5_number</Filter>
     </Image>
@@ -276,6 +240,39 @@
     </Image>
     <Image Include="input\v10_number\two.png">
       <Filter>Resource Files\v10_number</Filter>
+    </Image>
+    <Image Include="input\01.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\02.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\03.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\04.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\05.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\06.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\07.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\08.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\09.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\v4\Y.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\v5\Y.png">
+      <Filter>Resource Files\v5</Filter>
     </Image>
   </ItemGroup>
 </Project>

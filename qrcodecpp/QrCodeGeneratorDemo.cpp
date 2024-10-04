@@ -3,12 +3,14 @@
 //         module 0 : in white 0xFF
 #define DEBUG
 #define NOMINMAX
+//#define SHOW_IMAGES // show images
 
 #include <opencv2\opencv.hpp>
 #include "BitBuffer.hpp"
 #include "QrCode.hpp"
 #include "ImageProcess.hpp"
 #include <iostream>
+#include <filesystem>
 #include <iomanip>
 #include <cmath>
 #include <vector>
@@ -24,7 +26,11 @@ using namespace ImageProcess;
 using qrcodegen::QrCode;
 using qrcodegen::QrSegment;
 
+namespace fs = std::filesystem;
+
 enum moduleType { MTFinder, MTAlign, MTSeparator, MTTiming, MTFormat, MTVersion, MTDarkM, MTData };
+
+
 
 // Function prototypes
 Mat drawBinaryQRCode(const QrCode& qr, int mSize, int qzSize);
@@ -99,45 +105,93 @@ int main()
 	cout << "qrNear Version: " << qrNear.getVersion() << endl;
 	cout << "qrFar Version:" << qrFar.getVersion() << endl;
 
+	int nearVer = qrNear.getVersion();
+	int farVer = qrFar.getVersion();
+
 	// In our construction the QR codes must have the same version
 	if (qrNear.getVersion() != qrFar.getVersion()) {
 		cout << "Version not the same" << endl;
-		exit(0);
+		exit(1);
 	}
-
-	imshow("Near QR", qrNearImg);
-	imshow("Far QR", qrFarImg);
-	imwrite("output\\nearQRCode.jpg", qrNearImg);
-	imwrite("output\\farQRCode.jpg", qrFarImg);
 
 	Mat qrDualImg = dmQRCode(qrNear, qrFar, qZsize, mSize, cSize);
 
-
-	string dualwndName = "Dual Message QR Code uniPulse " + std::to_string(mSize) + "_" + std::to_string(cSize);
-	string dualfileName = "output\\DualQRCode" + std::to_string(mSize) + "_" + std::to_string(cSize) + ".jpg";
-
-
-	imshow(dualwndName.c_str(), qrDualImg);
-	imwrite(dualfileName, qrDualImg);
 #pragma endregion
-	string* filenames = new string{ "a.png", "b.png" };
+
+#pragma region RandomGrid
+
+	const string  inputPath = "input\\v" + to_string(farVer) + "\\";
+	vector<string> secertFilePaths;
+	vector<string> secertFileNames;
+
+	try {
+		for (const auto& entry : fs::directory_iterator(inputPath)) {
+			if (entry.is_regular_file()) {  // 檢查是否為一般檔案
+				//secertFilenams.push_back(entry.path().filename().string());  // 只存檔案名稱
+				secertFilePaths.push_back(entry.path().string());  // 記錄完整路徑名稱
+				secertFileNames.push_back(entry.path().stem().string());  // 只存不包含副檔名的檔案名稱
+			}
+		}
+	}
+	catch (const fs::filesystem_error& e) {
+		cerr << "File System Error: " << e.what() << endl;
+		return 1;
+	}
+
+	// 列出所有檔案名稱
+	cout << "filenames:" << endl;
+	int numberofFiles = secertFilePaths.size();
+	for (int i = 0; i < numberofFiles; i++) {
+		cout << secertFilePaths[i] << endl;
+		cout << secertFileNames[i] << endl;
+		string secretFilePath = secertFilePaths[i];
+		Mat imgSecret = imread(secretFilePath);
+		Mat imgRG = EncodeRandomGridQrCode(imgSecret, qrFar, qZsize, mSize);
+		Mat mImgAb = StackImage(qrDualImg, imgRG);
+
+#ifdef SHOW_IMAGES
+		// show images
+		imshow("Near QR", qrNearImg);
+		imshow("Far QR", qrFarImg);
+		imshow("DualQRCode", qrDualImg);
+		imshow("Secret Image", imgSecret);
+		imshow("Share image", imgRG);
+		imshow("Stack Image", mImgAb);
+#endif // SHOW_IMAGES
+
+		// write images
+		imwrite("output\\v" + to_string(farVer) + "\\"+ secertFileNames[i] +"_nQrCode.png", qrNearImg);
+		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_fQrCode.png", qrFarImg);
+		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_dQrCode.png", qrDualImg);
+		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_share.png", imgRG);
+		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_stack.png", mImgAb);
+
+	}
+
+
 	//Mat imgSecret = imread("vsimg.png");
 	
+	//string secretfilename = "input\\v4\\04.png";
+	//Mat imgSecret = imread(secretfilename);
+	//if (imgSecret.empty()) {
+	//	cerr << "Error: Unable to read image! filename:"<< secretfilename << endl;
+	//	exit(2);
+	//}
 
-	Mat imgSecret = imread("input\\v4\\s.png");
-	imshow("Secret Image", imgSecret);
+	// Encode share image using random grid
 
-	Mat imgRG = EncodeRandomGridQrCode(imgSecret, qrFar, qZsize, mSize);
-	imshow("Share image", imgRG);
-	imwrite("output\\ShareImage.jpg", imgRG);
+	// Stack dual QrCode and share image
+#pragma endregion
+	
 
-	Mat mImgAb = StackImage(qrDualImg, imgRG);
-	imshow("Stack Image", mImgAb);
-	imwrite("output\\StackImage.jpg", mImgAb);
+
 	waitKey(0);
 	return EXIT_SUCCESS;
 }
 
+
+
+#pragma region check function
 vector<int> getAPPositions(int ver) {
 	if (ver == 1)
 		return vector<int>();
@@ -160,7 +214,6 @@ vector<int> getAPPositions(int ver) {
 	}
 }
 
-#pragma region check function
 bool isFinderP(int y, int x, int ver)
 {
 	int modulesPerRow = 17 + ver * 4;
