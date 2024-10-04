@@ -139,11 +139,11 @@ int main()
 	}
 
 	// 列出所有檔案名稱
-	cout << "filenames:" << endl;
+	//cout << "filenames:" << endl;
 	int numberofFiles = secertFilePaths.size();
 	for (int i = 0; i < numberofFiles; i++) {
-		cout << secertFilePaths[i] << endl;
-		cout << secertFileNames[i] << endl;
+		//cout << secertFilePaths[i] << endl;
+		//cout << secertFileNames[i] << endl;
 		string secretFilePath = secertFilePaths[i];
 		Mat imgSecret = imread(secretFilePath);
 		Mat imgRG = EncodeRandomGridQrCode(imgSecret, qrFar, qZsize, mSize);
