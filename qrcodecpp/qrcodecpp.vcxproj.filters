@@ -37,6 +37,9 @@
     <Filter Include="Resource Files\v10_number">
       <UniqueIdentifier>{d8b4b952-d0f3-402f-94ef-695cc79c9ea5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\v6">
+      <UniqueIdentifier>{76e82bbf-05e8-403c-8ff6-c24338ef54aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BitBuffer.cpp">
@@ -79,33 +82,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="input\v5_number\eight.png">
-      <Filter>Resource Files\v5_number</Filter>
-    </Image>
-    <Image Include="input\v5_number\five.png">
-      <Filter>Resource Files\v5_number</Filter>
-    </Image>
-    <Image Include="input\v5_number\four.png">
-      <Filter>Resource Files\v5_number</Filter>
-    </Image>
-    <Image Include="input\v5_number\nine.png">
-      <Filter>Resource Files\v5_number</Filter>
-    </Image>
-    <Image Include="input\v5_number\one.png">
-      <Filter>Resource Files\v5_number</Filter>
-    </Image>
-    <Image Include="input\v5_number\seven.png">
-      <Filter>Resource Files\v5_number</Filter>
-    </Image>
-    <Image Include="input\v5_number\six.png">
-      <Filter>Resource Files\v5_number</Filter>
-    </Image>
-    <Image Include="input\v5_number\three.png">
-      <Filter>Resource Files\v5_number</Filter>
-    </Image>
-    <Image Include="input\v5_number\two.png">
-      <Filter>Resource Files\v5_number</Filter>
-    </Image>
     <Image Include="input\v6_number\eight.png">
       <Filter>Resource Files\v6_number</Filter>
     </Image>
@@ -274,8 +250,131 @@
     <Image Include="input\v5\Y.png">
       <Filter>Resource Files\v5</Filter>
     </Image>
-    <Image Include="input\v4\WB.png">
+    <Image Include="input\v5_number\eight.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5_number\five.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5_number\four.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5_number\nine.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5_number\one.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5_number\seven.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5_number\six.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5_number\three.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5_number\two.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v4\WB_DOWN.png">
       <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\v4\WB_LEFT.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\v4\WB_RIGHT.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\v4\WB_UP.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\v5\WB_UP.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5\WB_DOWN.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5\WB_LEFT.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5\WB_RIGHT.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v6\three.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\two.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\WB_DOWN.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\WB_LEFT.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\WB_RIGHT.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\WB_UP.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\eight.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\five.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\four.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\nine.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\one.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\seven.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\six.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v4\WB_RU.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\v4\WB_LD.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\v4\WB_LU.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\v4\WB_RD.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
+    <Image Include="input\v5\WB_RU.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5\WB_LD.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5\WB_LU.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v5\WB_RD.png">
+      <Filter>Resource Files\v5</Filter>
+    </Image>
+    <Image Include="input\v6\WB_RU.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\WB_LD.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\WB_LU.png">
+      <Filter>Resource Files\v6</Filter>
+    </Image>
+    <Image Include="input\v6\WB_RD.png">
+      <Filter>Resource Files\v6</Filter>
     </Image>
   </ItemGroup>
 </Project>
