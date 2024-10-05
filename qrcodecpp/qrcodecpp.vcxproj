@@ -192,6 +192,7 @@
     <Image Include="input\v10_number\six.png" />
     <Image Include="input\v10_number\three.png" />
     <Image Include="input\v10_number\two.png" />
+    <Image Include="input\v4\WB.png" />
     <Image Include="input\v4\Y.png" />
     <Image Include="input\08.png" />
     <Image Include="input\05.png" />

@@ -274,5 +274,8 @@
     <Image Include="input\v5\Y.png">
       <Filter>Resource Files\v5</Filter>
     </Image>
+    <Image Include="input\v4\WB.png">
+      <Filter>Resource Files\v4</Filter>
+    </Image>
   </ItemGroup>
 </Project>
