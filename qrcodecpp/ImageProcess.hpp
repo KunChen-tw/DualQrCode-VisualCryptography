@@ -11,4 +11,6 @@ namespace ImageProcess {
 	* @return imgA 和 imgB 兩張疊合後的影像
 	*/
 	Mat StackImage(Mat& imgA, Mat& imgB);
+
+	Mat addBorder(Mat& img, int borderSize, const Scalar& borderColor);
 }

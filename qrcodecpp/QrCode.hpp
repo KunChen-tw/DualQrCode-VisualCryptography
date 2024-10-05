@@ -44,6 +44,7 @@ class QrCode final {
 	 */
 	public: static QrCode encodeText(const char *text, Ecc ecl);
 	
+	public: static QrCode encodeText(const char* text, Ecc ecl, int var);
 	
 	/* 
 	 * Returns a QR Code symbol representing the given binary data string at the given error correction level.

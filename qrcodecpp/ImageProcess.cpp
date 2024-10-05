@@ -1,7 +1,9 @@
 #include "ImageProcess.hpp"
 #include <opencv2\opencv.hpp>
+#include <iostream>
 
 using namespace cv;
+using namespace std;
 
 namespace ImageProcess {
 	/**
@@ -17,7 +19,8 @@ namespace ImageProcess {
 		int channelB = imgB.channels();
 
 		if (!(isEqualRow && isEqualCol)) {
-			throw "the sizes of imgA and imgB are different";
+			cerr << "the sizes of imgA and imgB are different" << endl;
+			exit(1);
 		}
 		if (channelA != 3) {
 			throw "imgA is not color image";
@@ -47,5 +50,11 @@ namespace ImageProcess {
 		}
 		return imgAB;
 
+	}
+
+	Mat addBorder(Mat& img, int borderSize, const Scalar& borderColor) {
+		Mat result;
+		copyMakeBorder(img, result, borderSize, borderSize, borderSize, borderSize, BORDER_CONSTANT, borderColor);
+		return result;
 	}
 }

@@ -91,11 +91,11 @@ int main()
 
 
 #pragma region DualQRCode
-	char textNear[2954] = "https://www.yzu.edu.tw                      "; // max Numeric: 7098; Aplphanumeric: 4296; Binary: 2953
-	char textFar[2954] = "https://www.youtube.com/watch?v=9i_UQC4znvU";
-
-	const QrCode qrNear = QrCode::encodeText(textNear, (QrCode::Ecc)eccL);
-	const QrCode qrFar = QrCode::encodeText(textFar, (QrCode::Ecc)eccL);
+	char textNear[2954] = "Near"; // max Numeric: 7098; Aplphanumeric: 4296; Binary: 2953
+	char textFar[2954] = "Far";
+	int version = 4;
+	const QrCode qrNear = QrCode::encodeText(textNear, (QrCode::Ecc)eccL, version);
+	const QrCode qrFar = QrCode::encodeText(textFar, (QrCode::Ecc)eccL, version);
 
 	// draw binary QR codes for comparison
 	Mat qrNearImg = drawBinaryQRCode(qrNear, mSize, qZsize);//將 QR Code 數據轉換為二值化圖像
@@ -142,7 +142,7 @@ int main()
 	//cout << "filenames:" << endl;
 	int numberofFiles = secertFilePaths.size();
 	for (int i = 0; i < numberofFiles; i++) {
-		//cout << secertFilePaths[i] << endl;
+		cout << secertFilePaths[i] << endl;
 		//cout << secertFileNames[i] << endl;
 		string secretFilePath = secertFilePaths[i];
 		Mat imgSecret = imread(secretFilePath);
@@ -158,13 +158,21 @@ int main()
 		imshow("Share image", imgRG);
 		imshow("Stack Image", mImgAb);
 #endif // SHOW_IMAGES
+		// add black border 
+		int borderSize = 4;
+		Scalar borderColor = Scalar(0, 0, 0);
+		Mat qrNearImgBorder = addBorder(qrNearImg, borderSize, borderColor);
+		Mat qrFarImgBorder = addBorder(qrFarImg, borderSize, borderColor);
+		Mat qrDualImgBorder = addBorder(qrDualImg, borderSize, borderColor);
+		Mat imgRGBorder = addBorder(imgRG, borderSize, borderColor);
+		Mat mImgAbBorder = addBorder(mImgAb, borderSize, borderColor);
 
 		// write images
-		imwrite("output\\v" + to_string(farVer) + "\\"+ secertFileNames[i] +"_nQrCode.png", qrNearImg);
-		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_fQrCode.png", qrFarImg);
-		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_dQrCode.png", qrDualImg);
-		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_share.png", imgRG);
-		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_stack.png", mImgAb);
+		imwrite("output\\v" + to_string(farVer) + "\\"+ secertFileNames[i] +"_nQrCode.png", qrNearImgBorder);
+		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_fQrCode.png", qrFarImgBorder);
+		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_dQrCode.png", qrDualImgBorder);
+		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_share.png", imgRGBorder);
+		imwrite("output\\v" + to_string(farVer) + "\\" + secertFileNames[i] + "_stack.png", mImgAbBorder);
 
 	}
 

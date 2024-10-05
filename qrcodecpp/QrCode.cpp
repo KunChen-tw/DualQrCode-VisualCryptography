@@ -49,11 +49,14 @@ int QrCode::getFormatBits(Ecc ecl) {
 }
 
 
-QrCode QrCode::encodeText(const char *text, Ecc ecl) {
+QrCode QrCode::encodeText(const char *text, Ecc ecl, int var) {
 	vector<QrSegment> segs = QrSegment::makeSegments(text);
-	return encodeSegments(segs, ecl);
+	return encodeSegments(segs, ecl, var);
 }
 
+QrCode QrCode::encodeText(const char* text, Ecc ecl) {
+	return encodeText(text, ecl, MIN_VERSION);
+}
 
 QrCode QrCode::encodeBinary(const vector<uint8_t> &data, Ecc ecl) {
 	vector<QrSegment> segs{QrSegment::makeBytes(data)};
